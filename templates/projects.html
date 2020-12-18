@@ -1,0 +1,20 @@
+{% extends 'home.html' %}
+
+{% block content %}
+
+{% for project in me.projects %}
+
+<h1>{{project.name}} </h1>
+<p> {{project.description}} </p>
+
+<ol>
+    {% for tag in project.tags %}
+    <li>
+        {{tag}}
+    </li>
+    {% endfor %}
+</ol>
+<hr>
+{% endfor %}
+
+{% endblock %}

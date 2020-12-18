@@ -1,0 +1,25 @@
+{% extends 'home.html' %}
+
+{% block content %}
+
+<div>
+    <h1><b>Quote of the day</b></h1>
+    <br>
+    {% for q in me.favourite_quotes%}
+    <blockquote>
+        <h3>{{q.quote}} </h3> 
+        <h4> - {{q.author}} </h4>       
+    </blockquote>
+    {% endfor%}
+      
+    <br>
+    
+</div>
+<p>Here are some memes because the quotes were probably boring :P</p>
+
+<button onclick="document.location='https://i.redd.it/i0imk0ay05k21.jpg'">meme :)</button>
+<button onclick="document.location='https://i.redd.it/prz7lg2pv6231.jpg'">another meme</button>
+<br>
+<a href="{{url_for('add_quote')}}"> Go Add Quotes </a>
+<a href="{{url_for('del_quote')}}"> Go Delete Quotes </a>
+{% endblock %}

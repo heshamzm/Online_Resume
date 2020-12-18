@@ -1,0 +1,32 @@
+{% extends 'home.html' %}
+
+
+{% block content %}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Course</th>
+            <th scope="col">Year</th>
+            <th scope="col">University</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for row in me.skills%}
+        <tr>
+            
+           
+            <th scope="row">{{row.number}}</th>
+            <!-- <th scope="col">1</th> -->
+            <td>{{row.course}}</td>
+            <td>{{row.year}}</td>
+            <td>{{row.uni}}</td>
+            
+        </tr>
+        {% endfor %}
+        
+    </tbody>
+</table>
+<span title="Sorry my laptop fan is hella loud!">Move your mouse over me!</span>
+{% endblock %}

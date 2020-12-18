@@ -1,0 +1,18 @@
+{% extends 'home.html' %}
+
+
+{% block content %}
+
+<h2>{{me.first_name | title}}{{me.last_name | title}}</h2>
+    <h3>Age: {{me.age}}</h3>
+    <h4>{{me.description}}</h4>
+    <div>
+        <div class="text-center">
+            <img src="{{pic}}" class="rounded-circle" alt="...">
+          </div>
+        <p><a href = "mailto:{{me.email}}">Email</a></p>        
+    </div>
+
+    <a href="{{url_for('edit_me')}}"> Go Edit Me </a>
+    
+{% endblock %}
