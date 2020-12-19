@@ -43,7 +43,7 @@ def home():
 
 @myapp.route('/me')
 def about_me():
-	return render_template("me.html", me = me, go_home = url_for("home"), pic = url_for('static', filename='images/yellow.jpg'))
+	return render_template("me.html", me = me, go_home = url_for("home"), pic = url_for('static', filename='images/hesham.jfif'))
 
 
 @myapp.route('/editme', methods=["GET", "POST"])
